@@ -5,21 +5,21 @@
 class Chippy < Formula
   desc "TUI 6502 emulator + ca65/cc65 source-level debugger"
   homepage "https://github.com/nkane/chippy"
-  version "0.4.0"
+  version "1.0.0-rc.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nkane/chippy/releases/download/v0.4.0/chippy_0.4.0_darwin_x86_64.tar.gz"
-      sha256 "4ea531d49c3ea5d6c91a4a3fbbd1a328240c957476f4babe20912cf064b5611e"
+      url "https://github.com/nkane/chippy/releases/download/v1.0.0-rc.1/chippy_1.0.0-rc.1_darwin_x86_64.tar.gz"
+      sha256 "fbff54616dd77b4ca8297a57202cb517906ac7b2e90f48e036387d225567baa4"
 
       define_method(:install) do
         bin.install "chippy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nkane/chippy/releases/download/v0.4.0/chippy_0.4.0_darwin_arm64.tar.gz"
-      sha256 "bd64e056f585b72303f998be579b592781e7523d7bc574cad7e4995f9dec75b5"
+      url "https://github.com/nkane/chippy/releases/download/v1.0.0-rc.1/chippy_1.0.0-rc.1_darwin_arm64.tar.gz"
+      sha256 "14b29637b381c9cf916e5f9d27769f61c06c74cff743fbffe3141c6feab6f012"
 
       define_method(:install) do
         bin.install "chippy"
@@ -29,15 +29,15 @@ class Chippy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nkane/chippy/releases/download/v0.4.0/chippy_0.4.0_linux_x86_64.tar.gz"
-      sha256 "736aa43b1a19967a81f77c055a526b7f5548aa8adb2250c039da6181d2301a05"
+      url "https://github.com/nkane/chippy/releases/download/v1.0.0-rc.1/chippy_1.0.0-rc.1_linux_x86_64.tar.gz"
+      sha256 "ece567361ab7555ffe4fdf191e1bf778313fef74ae1404787bce7b545e456607"
       define_method(:install) do
         bin.install "chippy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nkane/chippy/releases/download/v0.4.0/chippy_0.4.0_linux_arm64.tar.gz"
-      sha256 "a12967ac6fe8416dc53ad6cddd3c76c7c6e2d0cca13e6f01f4fa6738ee37ff47"
+      url "https://github.com/nkane/chippy/releases/download/v1.0.0-rc.1/chippy_1.0.0-rc.1_linux_arm64.tar.gz"
+      sha256 "d916380f93eea54663d1a721436ea0c07402a623087e23b76df055b8e4b8b88a"
       define_method(:install) do
         bin.install "chippy"
       end
