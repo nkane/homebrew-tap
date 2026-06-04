@@ -5,21 +5,21 @@
 class Chippy < Formula
   desc "TUI 6502 emulator + ca65/cc65 source-level debugger"
   homepage "https://github.com/nkane/chippy"
-  version "1.2.0"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nkane/chippy/releases/download/v1.2.0/chippy_1.2.0_darwin_x86_64.tar.gz"
-      sha256 "4c188279f282989ade2f4d8588f09b576a001f078117a6e312dd22689e63d82b"
+      url "https://github.com/nkane/chippy/releases/download/v1.3.0/chippy_1.3.0_darwin_x86_64.tar.gz"
+      sha256 "cf32f0838b97d6aee542b3a4adcecf8a8479fd14ccbc5211da27b4d430706499"
 
       define_method(:install) do
         bin.install "chippy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nkane/chippy/releases/download/v1.2.0/chippy_1.2.0_darwin_arm64.tar.gz"
-      sha256 "dc16d7b678bf15a10539173493c1005b6a4cce8568f169ff82553a0b913f3e97"
+      url "https://github.com/nkane/chippy/releases/download/v1.3.0/chippy_1.3.0_darwin_arm64.tar.gz"
+      sha256 "b435e1abbde49f973d803a8707eb9a5dd68602037d873508a2e867aa7aaabff0"
 
       define_method(:install) do
         bin.install "chippy"
@@ -29,15 +29,15 @@ class Chippy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nkane/chippy/releases/download/v1.2.0/chippy_1.2.0_linux_x86_64.tar.gz"
-      sha256 "12b05460977c7b41cf4c9f2837a4fdf9d50b09e630453cdca35378ac2e374b92"
+      url "https://github.com/nkane/chippy/releases/download/v1.3.0/chippy_1.3.0_linux_x86_64.tar.gz"
+      sha256 "37e5e0e32217fe9f4adb595ec9c203208a2046c2d3ee71d46d7cce543fed6cfe"
       define_method(:install) do
         bin.install "chippy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nkane/chippy/releases/download/v1.2.0/chippy_1.2.0_linux_arm64.tar.gz"
-      sha256 "dbc5c7d526c6241840730c015d759afc593fe7663434a79fc0dde2ae825dfabd"
+      url "https://github.com/nkane/chippy/releases/download/v1.3.0/chippy_1.3.0_linux_arm64.tar.gz"
+      sha256 "56419f00e2beb2dcd5f8383fc6bb48b34c91e3f0c8649b4e0977ef7d7c055ba4"
       define_method(:install) do
         bin.install "chippy"
       end
